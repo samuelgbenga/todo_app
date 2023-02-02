@@ -1,0 +1,20 @@
+front end design:
+
+To do with to do with deadline
+
+
+create css for every react-component
+three sub components
+the head
+    subcomponents
+        shows nice logo, date deadline: to set and time: to set the time deadline
+        input todo with a + sign to add
+the middle that shows the earliest deadline todo
+        just one component.
+        the date of doing, the todo, 
+        count down to deadline time
+the todo list
+    
+    check box. then what to do
+    deadline to do same as the middle one
+

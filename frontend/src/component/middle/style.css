@@ -1,0 +1,68 @@
+.middle {
+  background-color: whitesmoke;
+  border-radius: 29px 0 0 0;
+  height: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle .middleContainer {
+  width: 90%;
+  height: 68%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.middleContainer .date {
+  color: white;
+  width: 88px;
+  height: 100%;
+  border-radius: 13px;
+  background-color: rgb(99, 99, 99);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.middleContainer .date span {
+  font-weight: 100;
+  font-size: 14px;
+}
+.middleContainer .deadline {
+  background-color: rgb(228, 228, 228);
+  height: 100%;
+  position: absolute;
+  right: -40px;
+  border-radius: 13px 0 0 8px;
+  width: 88px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.middleContainer .deadline span {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.middleContainer .todo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto 10px;
+  font-size: 18px;
+}

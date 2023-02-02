@@ -1,0 +1,57 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+  padding-top: 28px;
+
+  margin-top: 0px;
+
+  align-items: center;
+}
+.head > div {
+  color: white;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.date {
+  height: 35px;
+}
+.date .fourdash {
+  font-size: 27px;
+}
+.date .alarmClock {
+  font-size: 27px;
+}
+.todoInput {
+  margin-top: 12px;
+  height: 50px;
+  background-color: whitesmoke;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.todoInput input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 11px;
+  font-size: 16px;
+  overflow: hidden;
+}
+.todoInput input[type="text"] {
+  background-color: transparent;
+}
+.todoInput .icon {
+  color: rgba(116, 115, 115, 0.459);
+  height: 100%;
+}
+.todoInput .icon .plusIcon {
+  height: 100%;
+  font-size: 50px;
+  background-color: rgb(228, 228, 228);
+}
