@@ -3,7 +3,14 @@ import "./style.css";
 import { IoReorderFourOutline } from "react-icons/io5";
 import { GiAlarmClock } from "react-icons/gi";
 import { AiOutlinePlus } from "react-icons/ai";
-function Head() {
+function Head({ text, setText, addTodo, setTodos, isUpdating, updateTodo }) {
+  const handleOnclick = () => {
+    if (isUpdating) {
+      updateTodo();
+    } else {
+      addTodo(text, setText, setTodos);
+    }
+  };
   return (
     <div className="head">
       <div className="date">
@@ -15,8 +22,14 @@ function Head() {
         </div>
       </div>
       <div className="todoInput">
-        <input type="text" placeholder="hello..." />
-        <span className="icon">
+        <input
+          type="text"
+          placeholder="hello..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+
+        <span className="icon" onClick={() => handleOnclick()}>
           <AiOutlinePlus className="plusIcon" />
         </span>
       </div>

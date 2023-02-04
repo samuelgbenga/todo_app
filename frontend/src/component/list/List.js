@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 import { AiFillCheckSquare } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
-import { BiDotsVertical } from "react-icons/bi";
-export default function List() {
+import { RiDeleteBin6Line } from "react-icons/ri";
+export default function List({ todo, deleteTodo, setUpdate }) {
   return (
     <div className="list">
       <div className="listContain">
@@ -11,13 +11,13 @@ export default function List() {
           <span className="checkbox">
             <AiFillCheckSquare className="check" />
           </span>
-          <div className="todo">Todo bla bla bla</div>
-          <span className="editTodo">
-            <FaEdit />
-          </span>
+          <div className="todo">{todo}</div>
+
+          <FaEdit className="editTodo" onClick={setUpdate} />
         </div>
         <div className="deadline">
-          <BiDotsVertical className="threeDots" /> 10hr:15mins
+          <RiDeleteBin6Line onClick={deleteTodo} className="deletIcon" />{" "}
+          10hr:15mins
         </div>
       </div>
     </div>
