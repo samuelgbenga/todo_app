@@ -16,18 +16,22 @@ export const addTodo = (text, setText, setTodo) => {
   //   return console.log(err);
   // }
   if (text !== "") {
-    axios
-      .post(`${baseUrl}/addTodo`, { todo: text })
-      .then((data) => {
-        getTodo(setTodo);
-        setText("");
-        return console.log("added");
-      })
-      .catch((err) => console.log(err.request))
-      .then(() => {
-        getTodo(setTodo);
-        setText("");
-      });
+    axios.post(`${baseUrl}/addTodo`, { todo: text }).then(null, (err) => {
+      getTodo(setTodo);
+      setText("");
+      return console.log(err.response);
+    });
+
+    // axios
+    //   .post(`${baseUrl}/addTodo`, { todo: text })
+    //   .then((data) => {
+    //     return console.log("added");
+    //   })
+    //   .catch((err) => console.log(err.request))
+    //   .then(() => {
+    //     getTodo(setTodo);
+    //     setText("");
+    //   });
   }
 
   //let createTodo;
@@ -50,13 +54,12 @@ export const addTodo = (text, setText, setTodo) => {
 export const updateTodo = (_id, text, setText, setTodo, setIsUpdating) => {
   axios
     .post(`${baseUrl}/updateTodo/${_id}`, { todo: text })
-    .then((data) => {
-      return console.log(data);
-    })
-    .catch((err) => console.log(err));
-  getTodo(setTodo);
-  setText("");
-  setIsUpdating(false);
+    .then(null, (err) => {
+      getTodo(setTodo);
+      setText("");
+      setIsUpdating(false);
+      return console.log(err.response);
+    });
 };
 
 export const deleteTodo = (_id, setTodo) => {

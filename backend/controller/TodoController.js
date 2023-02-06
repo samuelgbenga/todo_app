@@ -43,7 +43,7 @@ export const addTodo = (req, res, next) => {
 };
 
 // update to do handler
-export const updateTodo = (req, res) => {
+export const updateTodo = (req, res, next) => {
   const { todo } = req.body;
   const todo_id = req.params.id;
   todoModel
@@ -55,6 +55,7 @@ export const updateTodo = (req, res) => {
   //getTodo(req, res);
   //   res.json({ message: "hello world" });
   //   return console.log("it works");
+  next();
 };
 
 // delete to do handler
