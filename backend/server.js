@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import TodoRoutes from "./routes/TodoRoutes.js";
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 const port = process.env.PORT || 4000;
 

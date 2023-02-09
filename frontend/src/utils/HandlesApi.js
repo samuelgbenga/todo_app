@@ -53,7 +53,7 @@ export const addTodo = (text, setText, setTodo) => {
 
 export const updateTodo = (_id, text, setText, setTodo, setIsUpdating) => {
   axios
-    .post(`${baseUrl}/updateTodo/${_id}`, { todo: text })
+    .post(`${baseUrl}/updatetodo/${_id}`, { todo: text })
     .then(null, (err) => {
       getTodo(setTodo);
       setText("");
